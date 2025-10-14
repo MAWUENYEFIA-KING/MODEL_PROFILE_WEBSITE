@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button-variants";
 import { ChevronDown } from "lucide-react";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/Hero-Background.jpg";
+
 
 const Hero = () => {
   const scrollToPortfolio = () => {
