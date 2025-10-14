@@ -20,12 +20,12 @@ description: "Featured in a fashion shoot showcasing Wildsar’s signature cap c
   },
   {
      "type": "Brand",
-  "name": "Wildstar",
+  "name": "Wildstar Collection",
   "description": "Featured on Wildstar's Verse singlet as part of their campaign."
   },
   {
   "type": "Editorial",
-  "name": "OntheMap",
+  "name": "OntheMap_Shot",
   "description": "Featured in OntheMap shoots. Worked together on multiple occasions."
   },
   {
