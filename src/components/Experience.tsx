@@ -9,7 +9,7 @@ description: "Building my path in fashion and editorial modeling. Open to repres
   },
   {
     type: "Brand",
-name: "Wildsar",
+name: "Wildstar Collection",
 description: "Featured in a fashion shoot showcasing Wildsar’s signature cap collection."
 
   },
