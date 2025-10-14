@@ -10,38 +10,38 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: 'smooth' });
+    element?.scrollIntoView({ behavior: "smooth" });
     setIsMobileMenuOpen(false);
   };
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled ? 'bg-background/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+        isScrolled ? "backdrop-blur-sm shadow-md bg-black/60" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between h-20">
           <button
-            onClick={() => scrollToSection('home')}
-            className="text-2xl font-playfair font-bold text-foreground hover:text-accent transition-colors"
+            onClick={() => scrollToSection("home")}
+            className="text-2xl font-playfair font-bold text-white hover:text-gray-300 transition-colors drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]"
           >
             MH
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {['home', 'about', 'portfolio', 'experience', 'contact'].map((item) => (
+            {["home", "about", "portfolio", "experience", "contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className="text-foreground hover:text-accent transition-colors font-inter capitalize tracking-wide"
+                className="text-white hover:text-gray-300 transition-colors font-inter capitalize tracking-wide drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]"
               >
                 {item}
               </button>
@@ -50,7 +50,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground hover:text-accent transition-colors"
+            className="md:hidden text-white hover:text-gray-300 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle mobile menu"
           >
@@ -62,11 +62,11 @@ const Navigation = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden pb-6 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              {['home', 'about', 'portfolio', 'experience', 'contact'].map((item) => (
+              {["home", "about", "portfolio", "experience", "contact"].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="text-foreground hover:text-accent transition-colors font-inter capitalize tracking-wide text-left py-2"
+                  className="text-white hover:text-gray-300 transition-colors font-inter capitalize tracking-wide text-left py-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]"
                 >
                   {item}
                 </button>
